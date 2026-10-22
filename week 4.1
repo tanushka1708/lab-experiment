@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int A = 4, B = 5, C = 2, D = 3, E = 6, F = 1, G = 7;
+    int i = 2; 
+    int j;
+    
+    printf("Initial Values: A=%d, B=%d, C=%d, D=%d, E=%d, F=%d, G=%d, i=%d\n\n", 
+            A, B, C, D, E, F, G, i);
+            
+    int res_a = A + B * C + (D * E) + F * G;
+    printf("a. Result of A + B * C + (D * E) + F * G = %d\n", res_a);
+    
+    int res_b = A / B * C - B + A * D / 3;
+    printf("b. Result of A / B * C - B + A * D / 3 = %d\n", res_b);
+    
+    int backup_A = A, backup_B = B; 
+    int res_c = A++ + B-- - A;
+    printf("c. Result of A++ + B-- - A = %d (Post-values: A=%d, B=%d)\n", res_c, A, B);
+    
+    A = backup_A;
+    B = backup_B;
+    j = (i++) + (++i);
+    printf("d. Result of j = (i++) + (++i) = %d (Final i=%d)\n", j, i);
+
+    return 0;
+}
